@@ -1,0 +1,186 @@
+@prefix : <http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/> .
+
+<http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/hasBrand
+:hasBrand rdf:type owl:ObjectProperty ;
+          rdfs:domain :Camera_Gear ;
+          rdfs:range :Brand .
+
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/hasMount
+:hasMount rdf:type owl:ObjectProperty ;
+          rdfs:domain :Camera ;
+          rdfs:range :Mount .
+
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/isCompatibleWith
+:isCompatibleWith rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Lens ;
+                  rdfs:range :Interchangeable_Lens_Camera .
+
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/usedFor
+:usedFor rdf:type owl:ObjectProperty ;
+         rdfs:domain :Lens ;
+         rdfs:range :Photography_Type .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Aperture
+:Aperture rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Lens ;
+          rdfs:range owl:rational .
+
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Brand
+:Brand rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Camera ;
+       rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Captor
+:Captor rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Camera ;
+        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/FocalLength
+:FocalLength rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Lens ;
+             rdfs:range owl:rational .
+
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Name
+:Name rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Camera ;
+      rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias#Camera_Gear
+:Camera_Gear rdf:type owl:Class ;
+             owl:equivalentClass [ rdf:type owl:Class ;
+                                   owl:unionOf ( :Camera
+                                                 :Lens
+                                               )
+                                 ] .
+
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias#Interchangeable_Lens_Camera
+:Interchangeable_Lens_Camera rdf:type owl:Class ;
+                             owl:equivalentClass [ owl:intersectionOf ( :Camera
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty :hasMount ;
+                                                                          owl:someValuesFrom :Mount
+                                                                        ]
+                                                                      ) ;
+                                                   rdf:type owl:Class
+                                                 ] ;
+                             rdfs:subClassOf :Camera .
+
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias#Lens_For_DSLR
+:Lens_For_DSLR rdf:type owl:Class ;
+               owl:equivalentClass [ owl:intersectionOf ( :Lens
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :isCompatibleWith ;
+                                                            owl:someValuesFrom :DSLR_Camera
+                                                          ]
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :isCompatibleWith ;
+                                                            owl:allValuesFrom :DSLR_Camera
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] .
+
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias#Lens_For_Mirrorless
+:Lens_For_Mirrorless rdf:type owl:Class ;
+                     owl:equivalentClass [ owl:intersectionOf ( :Lens
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty :isCompatibleWith ;
+                                                                  owl:someValuesFrom :Mirrorless_Camera
+                                                                ]
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty :isCompatibleWith ;
+                                                                  owl:allValuesFrom :Mirrorless_Camera
+                                                                ]
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] .
+
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Brand
+:Brand rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Camera
+:Camera rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Compact_Camera
+:Compact_Camera rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( :Camera
+                                                           [ rdf:type owl:Class ;
+                                                             owl:complementOf :Interchangeable_Lens_Camera
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] .
+
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/DSLR_Camera
+:DSLR_Camera rdf:type owl:Class ;
+             rdfs:subClassOf :Interchangeable_Lens_Camera ;
+             owl:disjointWith :Mirrorless_Camera .
+
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Lens
+:Lens rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Mirrorless_Camera
+:Mirrorless_Camera rdf:type owl:Class ;
+                   rdfs:subClassOf :Interchangeable_Lens_Camera .
+
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Mount
+:Mount rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Multi_Purpose_Lens
+:Multi_Purpose_Lens rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( :Lens
+                                                               [ rdf:type owl:Restriction ;
+                                                                 owl:onProperty :usedFor ;
+                                                                 owl:minQualifiedCardinality "6"^^xsd:nonNegativeInteger ;
+                                                                 owl:onClass :Photography_Type
+                                                               ]
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] .
+
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Photography_Type
+:Photography_Type rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
