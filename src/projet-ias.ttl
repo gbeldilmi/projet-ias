@@ -177,54 +177,6 @@
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/AF_S_DX_Nikkor_18_140mm_f3.5_5.6G_ED_VR
-:AF_S_DX_Nikkor_18_140mm_f3.5_5.6G_ED_VR rdf:type owl:NamedIndividual ,
-                                                  :Lens ;
-                                         :hasBrand :Nikon ;
-                                         :isCompatibleWith :D5600 ;
-                                         :usedFor :Architecture_photography ,
-                                                  :Family_photography ,
-                                                  :Landscape_photography ,
-                                                  :Portrait_photography ,
-                                                  :Street_photography ;
-                                         :Aperture "3.5-5.6" ;
-                                         :FocalLength "18-140mm" .
-
-
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/AF_S_Nikkor_50mm_f1.8G
-:AF_S_Nikkor_50mm_f1.8G rdf:type owl:NamedIndividual ;
-                        :hasBrand :Nikon ;
-                        :isCompatibleWith :D850 ;
-                        :usedFor :Architecture_photography ,
-                                 :Family_photography ,
-                                 :Food_photography ,
-                                 :Portrait_photography ,
-                                 :Street_photography ;
-                        :Aperture "1.8" ;
-                        :FocalLength "50mm" .
-
-
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/AF_S_Nikkor_800mm_f5.6E_FL_ED_VR
-:AF_S_Nikkor_800mm_f5.6E_FL_ED_VR rdf:type owl:NamedIndividual ,
-                                           :Lens ;
-                                  :hasBrand :Nikon ;
-                                  :isCompatibleWith :D850 ;
-                                  :usedFor :Aerial_photography ,
-                                           :Wildlife_photography ;
-                                  :Aperture "5.6" ,
-                                            "800mm" .
-
-
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Aerial_photography
-:Aerial_photography rdf:type owl:NamedIndividual ,
-                             :Photography_Type .
-
-
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Architecture_photography
-:Architecture_photography rdf:type owl:NamedIndividual ,
-                                   :Photography_Type .
-
-
 ###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Canon
 :Canon rdf:type owl:NamedIndividual ,
                 :Brand .
@@ -250,8 +202,7 @@
                                   :hasBrand :Canon ;
                                   :isCompatibleWith :EOS_5D_Mark_IV ,
                                                     :EOS_6D_Mark_II ;
-                                  :usedFor :Aerial_photography ,
-                                           :Sport_photography ,
+                                  :usedFor :Sport_photography ,
                                            :Wildlife_photography ;
                                   :Aperture "4.5-5.6" ;
                                   :FocalLength "100-400mm" .
@@ -262,10 +213,7 @@
                            :Lens_For_DSLR ;
                   :hasBrand :Canon ;
                   :isCompatibleWith :EOS_800D ;
-                  :usedFor :Architecture_photography ,
-                           :Family_photography ,
-                           :Food_photography ,
-                           :Macro_photography ,
+                  :usedFor :Macro_photography ,
                            :Portrait_photography ,
                            :Street_photography ;
                   :Aperture "1.8" ;
@@ -279,8 +227,7 @@
                               :isCompatibleWith :EOS_5D_Mark_IV ,
                                                 :EOS_6D_Mark_II ,
                                                 :EOS_800D ;
-                              :usedFor :Aerial_photography ,
-                                       :Sport_photography ,
+                              :usedFor :Sport_photography ,
                                        :Street_photography ,
                                        :Wildlife_photography ;
                               :Aperture "2.8" ;
@@ -316,134 +263,11 @@
 
 
 ###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Event_photography
-:Event_photography rdf:type owl:NamedIndividual ,
-                            :Photography_Type .
+:Event_photography rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/F_mount
-:F_mount rdf:type owl:NamedIndividual ,
-                  :Mount .
-
-
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Family_photography
-:Family_photography rdf:type owl:NamedIndividual ,
-                             :Photography_Type .
-
-
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Food_photography
-:Food_photography rdf:type owl:NamedIndividual ,
-                           :Photography_Type .
-
-
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Fujifilm
-:Fujifilm rdf:type owl:NamedIndividual ,
-                   :Brand .
-
-
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Fujinon_GF_110mm_f2
-:Fujinon_GF_110mm_f2 rdf:type owl:NamedIndividual ,
-                              :Lens_For_Mirrorless ;
-                     :hasBrand :Fujifilm ;
-                     :isCompatibleWith :GFX_100S ,
-                                       :GFX_50S ;
-                     :usedFor :Street_photography ;
-                     :Aperture "2" ;
-                     :FocalLength "110mm" .
-
-
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Fujinon_GF_23mm_f4
-:Fujinon_GF_23mm_f4 rdf:type owl:NamedIndividual ,
-                             :Lens ;
-                    :hasBrand :Fujifilm ;
-                    :isCompatibleWith :GFX_50S ;
-                    :Aperture "4" ;
-                    :FocalLength "23mm" .
-
-
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Fujinon_GF_250mm_f4
-:Fujinon_GF_250mm_f4 rdf:type owl:NamedIndividual ,
-                              :Lens ;
-                     :hasBrand :Fujifilm ;
-                     :isCompatibleWith :GFX_100S ;
-                     :usedFor :Wildlife_photography ;
-                     :Aperture "4" ;
-                     :FocalLength "250mm" .
-
-
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Fujinon_GF_45mm_f2.8
-:Fujinon_GF_45mm_f2.8 rdf:type owl:NamedIndividual ,
-                               :Lens_For_Mirrorless ;
-                      :hasBrand :Fujifilm ;
-                      :isCompatibleWith :GFX_50S ;
-                      :usedFor :Family_photography ,
-                               :Landscape_photography ;
-                      :Aperture "2.8" ;
-                      :FocalLength "45mm" .
-
-
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Fujinon_GF_63mm_f2.8_R_WR
-:Fujinon_GF_63mm_f2.8_R_WR rdf:type owl:NamedIndividual ,
-                                    :Lens ;
-                           :hasBrand :Fujifilm ;
-                           :isCompatibleWith :GFX_50S ;
-                           :Aperture "2.8" ;
-                           :FocalLength "63mm" .
-
-
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Fujinon_XF_18_55mm_f2.8_4_R_LM_OIS
-:Fujinon_XF_18_55mm_f2.8_4_R_LM_OIS rdf:type owl:NamedIndividual ,
-                                             :Lens ;
-                                    :hasBrand :Fujifilm ;
-                                    :isCompatibleWith :X_A5 ;
-                                    :usedFor :Architecture_photography ,
-                                             :Family_photography ,
-                                             :Landscape_photography ,
-                                             :Night_photography ;
-                                    :Aperture "2.8-4" ;
-                                    :FocalLength "18-55mm" .
-
-
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Fujinon_XF_200mm_f2_R_LM_OIS_WR
-:Fujinon_XF_200mm_f2_R_LM_OIS_WR rdf:type owl:NamedIndividual ,
-                                          :Lens ;
-                                 :hasBrand :Fujifilm ;
-                                 :isCompatibleWith :X_A5 ,
-                                                   :X_T4 ;
-                                 :usedFor :Sport_photography ,
-                                          :Wildlife_photography ;
-                                 :Aperture "2" ;
-                                 :FocalLength "200mm" .
-
-
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Fujinon_XF_56mm_f1.2_R_WR
-:Fujinon_XF_56mm_f1.2_R_WR rdf:type owl:NamedIndividual ,
-                                    :Lens ;
-                           :hasBrand :Fujifilm ;
-                           :isCompatibleWith :X_T4 ;
-                           :usedFor :Night_photography ,
-                                    :Portrait_photography ;
-                           :Aperture "1.2" ;
-                           :FocalLength "56mm" .
-
-
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/GFX_100S
-:GFX_100S rdf:type owl:NamedIndividual ,
-                   :Mirrorless_Camera ;
-          :hasBrand :Fujifilm ;
-          :hasMount :GF_mount ;
-          :Captor "Medium_Format" .
-
-
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/GFX_50S
-:GFX_50S rdf:type owl:NamedIndividual ,
-                  :Camera ;
-         :hasBrand :Fujifilm ;
-         :hasMount :GF_mount ;
-         :Captor "Medium_Format" .
-
-
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/GF_mount
-:GF_mount rdf:type owl:NamedIndividual .
+:F_mount rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Landscape_photography
@@ -457,22 +281,41 @@
 
 
 ###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Night_photography
-:Night_photography rdf:type owl:NamedIndividual .
+:Night_photography rdf:type owl:NamedIndividual ,
+                            :Photography_Type .
 
 
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Nikkor_Z_24_120mm_f4_S
-:Nikkor_Z_24_120mm_f4_S rdf:type owl:NamedIndividual ,
-                                 :Lens ;
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Nikkor_AF_S_50mm_f1.8G
+:Nikkor_AF_S_50mm_f1.8G rdf:type owl:NamedIndividual ;
                         :hasBrand :Nikon ;
-                        :isCompatibleWith :Z50II ,
-                                          :Z8 ;
-                        :usedFor :Architecture_photography ,
-                                 :Family_photography ,
-                                 :Landscape_photography ,
+                        :isCompatibleWith :D850 ;
+                        :usedFor :Night_photography ,
                                  :Portrait_photography ,
                                  :Street_photography ;
-                        :Aperture "4" ;
-                        :FocalLength "24-120mm" .
+                        :Aperture "1.8" ;
+                        :FocalLength "50mm" .
+
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Nikkor_AF_S_800mm_f5.6E_FL_ED_VR
+:Nikkor_AF_S_800mm_f5.6E_FL_ED_VR rdf:type owl:NamedIndividual ,
+                                           :Lens ;
+                                  :hasBrand :Nikon ;
+                                  :isCompatibleWith :D850 ;
+                                  :usedFor :Wildlife_photography ;
+                                  :Aperture "5.6" ,
+                                            "800mm" .
+
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Nikkor_AF_S_DX_18_140mm_f3.5_5.6G_ED_VR
+:Nikkor_AF_S_DX_18_140mm_f3.5_5.6G_ED_VR rdf:type owl:NamedIndividual ,
+                                                  :Lens ;
+                                         :hasBrand :Nikon ;
+                                         :isCompatibleWith :D5600 ;
+                                         :usedFor :Landscape_photography ,
+                                                  :Portrait_photography ,
+                                                  :Street_photography ;
+                                         :Aperture "3.5-5.6" ;
+                                         :FocalLength "18-140mm" .
 
 
 ###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Nikkor_Z_24_70mm_f2.8_S
@@ -480,9 +323,7 @@
                                   :Lens ;
                          :hasBrand :Nikon ;
                          :isCompatibleWith :Z8 ;
-                         :usedFor :Architecture_photography ,
-                                  :Family_photography ,
-                                  :Night_photography ,
+                         :usedFor :Night_photography ,
                                   :Portrait_photography ,
                                   :Street_photography ;
                          :Aperture "2.8" ;
@@ -505,8 +346,7 @@
 :Nikkor_Z_600mm_f4_TC_VR_S rdf:type owl:NamedIndividual ;
                            :hasBrand :Nikon ;
                            :isCompatibleWith :Z8 ;
-                           :usedFor :Aerial_photography ,
-                                    :Wildlife_photography ;
+                           :usedFor :Wildlife_photography ;
                            :Aperture "4" ;
                            :FocalLength "600mm" .
 
@@ -517,8 +357,7 @@
                              :hasBrand :Nikon ;
                              :isCompatibleWith :Z50II ,
                                                :Z8 ;
-                             :usedFor :Aerial_photography ,
-                                      :Event_photography ,
+                             :usedFor :Event_photography ,
                                       :Night_photography ,
                                       :Sport_photography ,
                                       :Wildlife_photography ;
@@ -535,8 +374,7 @@
 
 
 ###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Sport_photography
-:Sport_photography rdf:type owl:NamedIndividual ,
-                            :Photography_Type .
+:Sport_photography rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Street_photography
@@ -546,33 +384,6 @@
 ###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Wildlife_photography
 :Wildlife_photography rdf:type owl:NamedIndividual ,
                                :Photography_Type .
-
-
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/X100_V
-:X100_V rdf:type owl:NamedIndividual ,
-                 :Compact_Camera ;
-        :hasBrand :Fujifilm ;
-        :Captor "APS_C" .
-
-
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/X_A5
-:X_A5 rdf:type owl:NamedIndividual ,
-               :Mirrorless_Camera ;
-      :hasBrand :Fujifilm ;
-      :hasMount :X_mount ;
-      :Captor "APS_C" .
-
-
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/X_T4
-:X_T4 rdf:type owl:NamedIndividual ,
-               :Camera ;
-      :hasBrand :Fujifilm ;
-      :hasMount :X_mount ;
-      :Captor "APS_C" .
-
-
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/X_mount
-:X_mount rdf:type owl:NamedIndividual .
 
 
 ###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Z50II
@@ -598,8 +409,7 @@
 
 
 ###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Z_mount
-:Z_mount rdf:type owl:NamedIndividual ,
-                  :Mount .
+:Z_mount rdf:type owl:NamedIndividual .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
