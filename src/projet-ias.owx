@@ -1,0 +1,1154 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias">
+    <Prefix name="" IRI="http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="/Brand"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Camera"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Camera_Gear"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Compact_Camera"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/DSLR_Camera"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Interchangeable_Lens_Camera"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Lens"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Lens_For_DSLR"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Lens_For_Mirrorless"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Mirrorless_Camera"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Mount"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Multi_Purpose_Lens"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Photography_Type"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasBrand"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/hasMount"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/isCompatibleWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/usedFor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/Aperture"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/Captor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/FocalLength"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Canon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/D5600"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/D850"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/EF_100_400mm_f4.5_5.6L_IS_II_USM"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/EF_50mm_f1.8_STM"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/EF_70_200mm_f2.8L_IS_III_USM"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/EF_mount"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/EOS_5D_Mark_IV"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/EOS_6D_Mark_II"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/EOS_800D"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Event_photography"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/F_mount"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Landscape_photography"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Night_photography"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Nikkor_AF_S_50mm_f1.8G"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Nikkor_AF_S_800mm_f5.6E_FL_ED_VR"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Nikkor_AF_S_DX_18_140mm_f3.5_5.6G_ED_VR"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Nikkor_Z_24_70mm_f2.8_S"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Nikkor_Z_35mm_f1.4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Nikkor_Z_600mm_f4_TC_VR_S"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Nikkor_Z_70_200mm_f2.8_VR_S"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Nikon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Portrait_photography"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Powershot_G7X_Mark_III"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Sport_photography"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Street_photography"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Wildlife_photography"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Z50II"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Z8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Z9"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="/Z_mount"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="/Camera_Gear"/>
+        <ObjectUnionOf>
+            <Class IRI="/Camera"/>
+            <Class IRI="/Lens"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="/Compact_Camera"/>
+        <ObjectIntersectionOf>
+            <Class IRI="/Camera"/>
+            <ObjectExactCardinality cardinality="0">
+                <ObjectProperty IRI="/hasMount"/>
+                <Class IRI="/Mount"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="/Interchangeable_Lens_Camera"/>
+        <ObjectIntersectionOf>
+            <Class IRI="/Camera"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="/hasMount"/>
+                <Class IRI="/Mount"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="/Lens_For_DSLR"/>
+        <ObjectIntersectionOf>
+            <Class IRI="/Lens"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="/isCompatibleWith"/>
+                <Class IRI="/DSLR_Camera"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="/isCompatibleWith"/>
+                <Class IRI="/DSLR_Camera"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="/Lens_For_Mirrorless"/>
+        <ObjectIntersectionOf>
+            <Class IRI="/Lens"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="/isCompatibleWith"/>
+                <Class IRI="/Mirrorless_Camera"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="/isCompatibleWith"/>
+                <Class IRI="/Mirrorless_Camera"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="/Multi_Purpose_Lens"/>
+        <ObjectIntersectionOf>
+            <Class IRI="/Lens"/>
+            <ObjectMinCardinality cardinality="4">
+                <ObjectProperty IRI="/usedFor"/>
+                <Class IRI="/Photography_Type"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="/DSLR_Camera"/>
+        <Class IRI="/Interchangeable_Lens_Camera"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Interchangeable_Lens_Camera"/>
+        <Class IRI="/Camera"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Mirrorless_Camera"/>
+        <Class IRI="/Interchangeable_Lens_Camera"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="/Brand"/>
+        <Class IRI="/Camera"/>
+        <Class IRI="/Lens"/>
+        <Class IRI="/Mount"/>
+        <Class IRI="/Photography_Type"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="/DSLR_Camera"/>
+        <Class IRI="/Mirrorless_Camera"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="/Brand"/>
+        <NamedIndividual IRI="/Canon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/DSLR_Camera"/>
+        <NamedIndividual IRI="/D850"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Lens_For_DSLR"/>
+        <NamedIndividual IRI="/EF_50mm_f1.8_STM"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Lens_For_DSLR"/>
+        <NamedIndividual IRI="/EF_70_200mm_f2.8L_IS_III_USM"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Mount"/>
+        <NamedIndividual IRI="/EF_mount"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/DSLR_Camera"/>
+        <NamedIndividual IRI="/EOS_6D_Mark_II"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/DSLR_Camera"/>
+        <NamedIndividual IRI="/EOS_800D"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Photography_Type"/>
+        <NamedIndividual IRI="/Landscape_photography"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Photography_Type"/>
+        <NamedIndividual IRI="/Night_photography"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Lens"/>
+        <NamedIndividual IRI="/Nikkor_AF_S_800mm_f5.6E_FL_ED_VR"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Lens"/>
+        <NamedIndividual IRI="/Nikkor_AF_S_DX_18_140mm_f3.5_5.6G_ED_VR"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Lens"/>
+        <NamedIndividual IRI="/Nikkor_Z_24_70mm_f2.8_S"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Lens"/>
+        <NamedIndividual IRI="/Nikkor_Z_35mm_f1.4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Lens_For_Mirrorless"/>
+        <NamedIndividual IRI="/Nikkor_Z_70_200mm_f2.8_VR_S"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Photography_Type"/>
+        <NamedIndividual IRI="/Wildlife_photography"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="/Camera"/>
+        <NamedIndividual IRI="/Z8"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="/Event_photography"/>
+        <NamedIndividual IRI="/Landscape_photography"/>
+        <NamedIndividual IRI="/Night_photography"/>
+        <NamedIndividual IRI="/Portrait_photography"/>
+        <NamedIndividual IRI="/Sport_photography"/>
+        <NamedIndividual IRI="/Street_photography"/>
+        <NamedIndividual IRI="/Wildlife_photography"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasBrand"/>
+        <NamedIndividual IRI="/D5600"/>
+        <NamedIndividual IRI="/Nikon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasMount"/>
+        <NamedIndividual IRI="/D5600"/>
+        <NamedIndividual IRI="/F_mount"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasBrand"/>
+        <NamedIndividual IRI="/D850"/>
+        <NamedIndividual IRI="/Nikon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasBrand"/>
+        <NamedIndividual IRI="/EF_100_400mm_f4.5_5.6L_IS_II_USM"/>
+        <NamedIndividual IRI="/Canon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isCompatibleWith"/>
+        <NamedIndividual IRI="/EF_100_400mm_f4.5_5.6L_IS_II_USM"/>
+        <NamedIndividual IRI="/EOS_6D_Mark_II"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/EF_100_400mm_f4.5_5.6L_IS_II_USM"/>
+        <NamedIndividual IRI="/Sport_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/EF_100_400mm_f4.5_5.6L_IS_II_USM"/>
+        <NamedIndividual IRI="/Wildlife_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasBrand"/>
+        <NamedIndividual IRI="/EF_50mm_f1.8_STM"/>
+        <NamedIndividual IRI="/Canon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isCompatibleWith"/>
+        <NamedIndividual IRI="/EF_50mm_f1.8_STM"/>
+        <NamedIndividual IRI="/EOS_800D"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/EF_50mm_f1.8_STM"/>
+        <NamedIndividual IRI="/Portrait_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/EF_50mm_f1.8_STM"/>
+        <NamedIndividual IRI="/Street_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasBrand"/>
+        <NamedIndividual IRI="/EF_70_200mm_f2.8L_IS_III_USM"/>
+        <NamedIndividual IRI="/Canon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isCompatibleWith"/>
+        <NamedIndividual IRI="/EF_70_200mm_f2.8L_IS_III_USM"/>
+        <NamedIndividual IRI="/EOS_5D_Mark_IV"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isCompatibleWith"/>
+        <NamedIndividual IRI="/EF_70_200mm_f2.8L_IS_III_USM"/>
+        <NamedIndividual IRI="/EOS_6D_Mark_II"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isCompatibleWith"/>
+        <NamedIndividual IRI="/EF_70_200mm_f2.8L_IS_III_USM"/>
+        <NamedIndividual IRI="/EOS_800D"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/EF_70_200mm_f2.8L_IS_III_USM"/>
+        <NamedIndividual IRI="/Sport_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/EF_70_200mm_f2.8L_IS_III_USM"/>
+        <NamedIndividual IRI="/Street_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/EF_70_200mm_f2.8L_IS_III_USM"/>
+        <NamedIndividual IRI="/Wildlife_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasBrand"/>
+        <NamedIndividual IRI="/EOS_5D_Mark_IV"/>
+        <NamedIndividual IRI="/Canon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasMount"/>
+        <NamedIndividual IRI="/EOS_5D_Mark_IV"/>
+        <NamedIndividual IRI="/EF_mount"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasBrand"/>
+        <NamedIndividual IRI="/EOS_6D_Mark_II"/>
+        <NamedIndividual IRI="/Canon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasBrand"/>
+        <NamedIndividual IRI="/EOS_800D"/>
+        <NamedIndividual IRI="/Canon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasMount"/>
+        <NamedIndividual IRI="/EOS_800D"/>
+        <NamedIndividual IRI="/EF_mount"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasBrand"/>
+        <NamedIndividual IRI="/Nikkor_AF_S_50mm_f1.8G"/>
+        <NamedIndividual IRI="/Nikon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isCompatibleWith"/>
+        <NamedIndividual IRI="/Nikkor_AF_S_50mm_f1.8G"/>
+        <NamedIndividual IRI="/D5600"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isCompatibleWith"/>
+        <NamedIndividual IRI="/Nikkor_AF_S_50mm_f1.8G"/>
+        <NamedIndividual IRI="/D850"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/Nikkor_AF_S_50mm_f1.8G"/>
+        <NamedIndividual IRI="/Event_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/Nikkor_AF_S_50mm_f1.8G"/>
+        <NamedIndividual IRI="/Night_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/Nikkor_AF_S_50mm_f1.8G"/>
+        <NamedIndividual IRI="/Portrait_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/Nikkor_AF_S_50mm_f1.8G"/>
+        <NamedIndividual IRI="/Street_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasBrand"/>
+        <NamedIndividual IRI="/Nikkor_AF_S_800mm_f5.6E_FL_ED_VR"/>
+        <NamedIndividual IRI="/Nikon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isCompatibleWith"/>
+        <NamedIndividual IRI="/Nikkor_AF_S_800mm_f5.6E_FL_ED_VR"/>
+        <NamedIndividual IRI="/D850"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/Nikkor_AF_S_800mm_f5.6E_FL_ED_VR"/>
+        <NamedIndividual IRI="/Wildlife_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasBrand"/>
+        <NamedIndividual IRI="/Nikkor_AF_S_DX_18_140mm_f3.5_5.6G_ED_VR"/>
+        <NamedIndividual IRI="/Nikon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isCompatibleWith"/>
+        <NamedIndividual IRI="/Nikkor_AF_S_DX_18_140mm_f3.5_5.6G_ED_VR"/>
+        <NamedIndividual IRI="/D5600"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/Nikkor_AF_S_DX_18_140mm_f3.5_5.6G_ED_VR"/>
+        <NamedIndividual IRI="/Landscape_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/Nikkor_AF_S_DX_18_140mm_f3.5_5.6G_ED_VR"/>
+        <NamedIndividual IRI="/Portrait_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/Nikkor_AF_S_DX_18_140mm_f3.5_5.6G_ED_VR"/>
+        <NamedIndividual IRI="/Street_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasBrand"/>
+        <NamedIndividual IRI="/Nikkor_Z_24_70mm_f2.8_S"/>
+        <NamedIndividual IRI="/Nikon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isCompatibleWith"/>
+        <NamedIndividual IRI="/Nikkor_Z_24_70mm_f2.8_S"/>
+        <NamedIndividual IRI="/Z50II"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isCompatibleWith"/>
+        <NamedIndividual IRI="/Nikkor_Z_24_70mm_f2.8_S"/>
+        <NamedIndividual IRI="/Z8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/Nikkor_Z_24_70mm_f2.8_S"/>
+        <NamedIndividual IRI="/Night_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/Nikkor_Z_24_70mm_f2.8_S"/>
+        <NamedIndividual IRI="/Portrait_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/Nikkor_Z_24_70mm_f2.8_S"/>
+        <NamedIndividual IRI="/Street_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasBrand"/>
+        <NamedIndividual IRI="/Nikkor_Z_35mm_f1.4"/>
+        <NamedIndividual IRI="/Nikon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isCompatibleWith"/>
+        <NamedIndividual IRI="/Nikkor_Z_35mm_f1.4"/>
+        <NamedIndividual IRI="/Z50II"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/Nikkor_Z_35mm_f1.4"/>
+        <NamedIndividual IRI="/Landscape_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/Nikkor_Z_35mm_f1.4"/>
+        <NamedIndividual IRI="/Night_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/Nikkor_Z_35mm_f1.4"/>
+        <NamedIndividual IRI="/Street_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasBrand"/>
+        <NamedIndividual IRI="/Nikkor_Z_600mm_f4_TC_VR_S"/>
+        <NamedIndividual IRI="/Nikon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isCompatibleWith"/>
+        <NamedIndividual IRI="/Nikkor_Z_600mm_f4_TC_VR_S"/>
+        <NamedIndividual IRI="/Z8"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/Nikkor_Z_600mm_f4_TC_VR_S"/>
+        <NamedIndividual IRI="/Wildlife_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasBrand"/>
+        <NamedIndividual IRI="/Nikkor_Z_70_200mm_f2.8_VR_S"/>
+        <NamedIndividual IRI="/Nikon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/isCompatibleWith"/>
+        <NamedIndividual IRI="/Nikkor_Z_70_200mm_f2.8_VR_S"/>
+        <NamedIndividual IRI="/Z50II"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/Nikkor_Z_70_200mm_f2.8_VR_S"/>
+        <NamedIndividual IRI="/Event_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/Nikkor_Z_70_200mm_f2.8_VR_S"/>
+        <NamedIndividual IRI="/Night_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/Nikkor_Z_70_200mm_f2.8_VR_S"/>
+        <NamedIndividual IRI="/Sport_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/Nikkor_Z_70_200mm_f2.8_VR_S"/>
+        <NamedIndividual IRI="/Wildlife_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasBrand"/>
+        <NamedIndividual IRI="/Powershot_G7X_Mark_III"/>
+        <NamedIndividual IRI="/Canon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/usedFor"/>
+        <NamedIndividual IRI="/Powershot_G7X_Mark_III"/>
+        <NamedIndividual IRI="/Street_photography"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasBrand"/>
+        <NamedIndividual IRI="/Z50II"/>
+        <NamedIndividual IRI="/Nikon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasMount"/>
+        <NamedIndividual IRI="/Z50II"/>
+        <NamedIndividual IRI="/Z_mount"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasBrand"/>
+        <NamedIndividual IRI="/Z8"/>
+        <NamedIndividual IRI="/Nikon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasBrand"/>
+        <NamedIndividual IRI="/Z9"/>
+        <NamedIndividual IRI="/Nikon"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="/hasMount"/>
+        <NamedIndividual IRI="/Z9"/>
+        <NamedIndividual IRI="/Z_mount"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/Captor"/>
+        <NamedIndividual IRI="/D5600"/>
+        <Literal>APS_C</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/Captor"/>
+        <NamedIndividual IRI="/D850"/>
+        <Literal>Full_Frame</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/Aperture"/>
+        <NamedIndividual IRI="/EF_100_400mm_f4.5_5.6L_IS_II_USM"/>
+        <Literal>4.5-5.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/FocalLength"/>
+        <NamedIndividual IRI="/EF_100_400mm_f4.5_5.6L_IS_II_USM"/>
+        <Literal>100-400mm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/Aperture"/>
+        <NamedIndividual IRI="/EF_50mm_f1.8_STM"/>
+        <Literal>1.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/FocalLength"/>
+        <NamedIndividual IRI="/EF_50mm_f1.8_STM"/>
+        <Literal>50mm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/Aperture"/>
+        <NamedIndividual IRI="/EF_70_200mm_f2.8L_IS_III_USM"/>
+        <Literal>2.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/FocalLength"/>
+        <NamedIndividual IRI="/EF_70_200mm_f2.8L_IS_III_USM"/>
+        <Literal>70-200mm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/Captor"/>
+        <NamedIndividual IRI="/EOS_5D_Mark_IV"/>
+        <Literal>Full_Frame</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/Captor"/>
+        <NamedIndividual IRI="/EOS_6D_Mark_II"/>
+        <Literal>Full_Frame</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/Captor"/>
+        <NamedIndividual IRI="/EOS_800D"/>
+        <Literal>APS_C</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/Aperture"/>
+        <NamedIndividual IRI="/Nikkor_AF_S_50mm_f1.8G"/>
+        <Literal>1.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/FocalLength"/>
+        <NamedIndividual IRI="/Nikkor_AF_S_50mm_f1.8G"/>
+        <Literal>50mm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/Aperture"/>
+        <NamedIndividual IRI="/Nikkor_AF_S_800mm_f5.6E_FL_ED_VR"/>
+        <Literal>5.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/Aperture"/>
+        <NamedIndividual IRI="/Nikkor_AF_S_800mm_f5.6E_FL_ED_VR"/>
+        <Literal>800mm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/Aperture"/>
+        <NamedIndividual IRI="/Nikkor_AF_S_DX_18_140mm_f3.5_5.6G_ED_VR"/>
+        <Literal>3.5-5.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/FocalLength"/>
+        <NamedIndividual IRI="/Nikkor_AF_S_DX_18_140mm_f3.5_5.6G_ED_VR"/>
+        <Literal>18-140mm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/Aperture"/>
+        <NamedIndividual IRI="/Nikkor_Z_24_70mm_f2.8_S"/>
+        <Literal>2.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/FocalLength"/>
+        <NamedIndividual IRI="/Nikkor_Z_24_70mm_f2.8_S"/>
+        <Literal>24-70mm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/Aperture"/>
+        <NamedIndividual IRI="/Nikkor_Z_35mm_f1.4"/>
+        <Literal>1.4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/FocalLength"/>
+        <NamedIndividual IRI="/Nikkor_Z_35mm_f1.4"/>
+        <Literal>35mm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/Aperture"/>
+        <NamedIndividual IRI="/Nikkor_Z_600mm_f4_TC_VR_S"/>
+        <Literal>4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/FocalLength"/>
+        <NamedIndividual IRI="/Nikkor_Z_600mm_f4_TC_VR_S"/>
+        <Literal>600mm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/Aperture"/>
+        <NamedIndividual IRI="/Nikkor_Z_70_200mm_f2.8_VR_S"/>
+        <Literal>2.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/FocalLength"/>
+        <NamedIndividual IRI="/Nikkor_Z_70_200mm_f2.8_VR_S"/>
+        <Literal>70-200mm</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/Captor"/>
+        <NamedIndividual IRI="/Powershot_G7X_Mark_III"/>
+        <Literal>CMOS 20.1 Mpx</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/Captor"/>
+        <NamedIndividual IRI="/Z50II"/>
+        <Literal>APS_C</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/Captor"/>
+        <NamedIndividual IRI="/Z8"/>
+        <Literal>Full_Frame</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="/Captor"/>
+        <NamedIndividual IRI="/Z9"/>
+        <Literal>Full_Frame</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasBrand"/>
+        <Class IRI="/Camera_Gear"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/hasMount"/>
+        <Class IRI="/Camera"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/isCompatibleWith"/>
+        <Class IRI="/Lens"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/usedFor"/>
+        <ObjectUnionOf>
+            <Class IRI="/Compact_Camera"/>
+            <Class IRI="/Lens"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasBrand"/>
+        <Class IRI="/Brand"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/hasMount"/>
+        <Class IRI="/Mount"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/isCompatibleWith"/>
+        <Class IRI="/Interchangeable_Lens_Camera"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/usedFor"/>
+        <Class IRI="/Photography_Type"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="/Aperture"/>
+        <Class IRI="/Lens"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/Captor"/>
+        <Class IRI="/Camera"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/FocalLength"/>
+        <Class IRI="/Lens"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="/Aperture"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/Captor"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/FocalLength"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Define if a Lens is for DSLR_Camera by checking others Lens that are compatible with the camera are for DSLR</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>r_lens_for_dslr_by_similarity</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="/DSLR_Camera"/>
+                <Variable IRI="/cam"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="/isCompatibleWith"/>
+                <Variable IRI="/cam"/>
+                <Variable IRI="/lens1"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="/isCompatibleWith"/>
+                <Variable IRI="/cam"/>
+                <Variable IRI="/lens2"/>
+            </ObjectPropertyAtom>
+            <DifferentIndividualsAtom>
+                <Variable IRI="/lens1"/>
+                <Variable IRI="/lens2"/>
+            </DifferentIndividualsAtom>
+            <ClassAtom>
+                <Class IRI="/Lens_For_DSLR"/>
+                <Variable IRI="/lens1"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="/Lens_For_DSLR"/>
+                <Variable IRI="/lens2"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Define if a Lens is for DSLR_Camera</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>r_lens_for_dslr</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="/isCompatibleWith"/>
+                <Variable IRI="/lens"/>
+                <Variable IRI="/cam"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="/DSLR_Camera"/>
+                <Variable IRI="/cam"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="/Lens_For_DSLR"/>
+                <Variable IRI="/lens"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Define if a Camera is a DSLR_Camera by finding a Lens_For_DSLR compatible with it</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>r_dslr_camera</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="/isCompatibleWith"/>
+                <Variable IRI="/cam"/>
+                <Variable IRI="/lens"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="/Lens_For_DSLR"/>
+                <Variable IRI="/lens"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="/DSLR_Camera"/>
+                <Variable IRI="/cam"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Define if a Camera is a Mirrorless_Camera by finding a Lens_For_Mirrorless compatible with it</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>r_mirrorless_camera</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="/isCompatibleWith"/>
+                <Variable IRI="/cam"/>
+                <Variable IRI="/lens"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="/Lens_For_Mirrorless"/>
+                <Variable IRI="/lens"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="/Mirrorless_Camera"/>
+                <Variable IRI="/cam"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Define if a Lens is for Mirrorless_Camera by checking others Lens that are compatible with the camera are for Mirrorless</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>r_lens_for_mirrorless_by_similarity</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="/Mirrorless_Camera"/>
+                <Variable IRI="/cam"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="/isCompatibleWith"/>
+                <Variable IRI="/cam"/>
+                <Variable IRI="/lens1"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="/isCompatibleWith"/>
+                <Variable IRI="/cam"/>
+                <Variable IRI="/lens2"/>
+            </ObjectPropertyAtom>
+            <DifferentIndividualsAtom>
+                <Variable IRI="/lens1"/>
+                <Variable IRI="/lens2"/>
+            </DifferentIndividualsAtom>
+            <ClassAtom>
+                <Class IRI="/Lens_For_Mirrorless"/>
+                <Variable IRI="/lens1"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="/Lens_For_Mirrorless"/>
+                <Variable IRI="/lens2"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Define if a Lens is for Mirrorless_Camera</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>r_lens_for_mirrorless</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="/isCompatibleWith"/>
+                <Variable IRI="/lens"/>
+                <Variable IRI="/cam"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="/Mirrorless_Camera"/>
+                <Variable IRI="/cam"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ClassAtom>
+                <Class IRI="/Lens_For_Mirrorless"/>
+                <Variable IRI="/lens"/>
+            </ClassAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Define that a lens is compatible with camera with the same mount</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>r_lens_compatibility_by_mount</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="/hasMount"/>
+                <Variable IRI="/cam1"/>
+                <Variable IRI="/mnt"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="/hasMount"/>
+                <Variable IRI="/cam2"/>
+                <Variable IRI="/mnt"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="/isCompatibleWith"/>
+                <Variable IRI="/lens"/>
+                <Variable IRI="/cam1"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="/isCompatibleWith"/>
+                <Variable IRI="/lens"/>
+                <Variable IRI="/cam2"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Define the mount of a camera by having a lens is compatible to an another camera</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>r_mount_by_lens_compability</Literal>
+        </Annotation>
+        <Body>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="/hasMount"/>
+                <Variable IRI="/cam1"/>
+                <Variable IRI="/mnt"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="/isCompatibleWith"/>
+                <Variable IRI="/lens"/>
+                <Variable IRI="/cam1"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="/isCompatibleWith"/>
+                <Variable IRI="/lens"/>
+                <Variable IRI="/cam2"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="/hasMount"/>
+                <Variable IRI="/cam2"/>
+                <Variable IRI="/mnt"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
