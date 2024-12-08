@@ -9,6 +9,14 @@
 <http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias> rdf:type owl:Ontology .
 
 #################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
 #    Object Properties
 #################################################################
 
@@ -32,7 +40,11 @@
 
 ###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/usedFor
 :usedFor rdf:type owl:ObjectProperty ;
-         rdfs:domain :Lens ;
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( :Compact_Camera
+                                     :Lens
+                                   )
+                     ] ;
          rdfs:range :Photography_Type .
 
 
@@ -161,7 +173,7 @@
                     owl:equivalentClass [ owl:intersectionOf ( :Lens
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty :usedFor ;
-                                                                 owl:minQualifiedCardinality "5"^^xsd:nonNegativeInteger ;
+                                                                 owl:minQualifiedCardinality "4"^^xsd:nonNegativeInteger ;
                                                                  owl:onClass :Photography_Type
                                                                ]
                                                              ) ;
@@ -176,6 +188,13 @@
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias#Powershot_G7X_Mark_III
+:Powershot_G7X_Mark_III rdf:type owl:NamedIndividual ;
+                        :hasBrand :Canon ;
+                        :usedFor :Street_photography ;
+                        :Captor "CMOS 20.1 Mpx" .
+
 
 ###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Canon
 :Canon rdf:type owl:NamedIndividual ,
@@ -193,15 +212,13 @@
 :D850 rdf:type owl:NamedIndividual ,
                :DSLR_Camera ;
       :hasBrand :Nikon ;
-      :hasMount :F_mount ;
       :Captor "Full_Frame" .
 
 
 ###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/EF_100_400mm_f4.5_5.6L_IS_II_USM
 :EF_100_400mm_f4.5_5.6L_IS_II_USM rdf:type owl:NamedIndividual ;
                                   :hasBrand :Canon ;
-                                  :isCompatibleWith :EOS_5D_Mark_IV ,
-                                                    :EOS_6D_Mark_II ;
+                                  :isCompatibleWith :EOS_6D_Mark_II ;
                                   :usedFor :Sport_photography ,
                                            :Wildlife_photography ;
                                   :Aperture "4.5-5.6" ;
@@ -213,8 +230,7 @@
                            :Lens_For_DSLR ;
                   :hasBrand :Canon ;
                   :isCompatibleWith :EOS_800D ;
-                  :usedFor :Macro_photography ,
-                           :Portrait_photography ,
+                  :usedFor :Portrait_photography ,
                            :Street_photography ;
                   :Aperture "1.8" ;
                   :FocalLength "50mm" .
@@ -250,7 +266,6 @@
 :EOS_6D_Mark_II rdf:type owl:NamedIndividual ,
                          :DSLR_Camera ;
                 :hasBrand :Canon ;
-                :hasMount :EF_mount ;
                 :Captor "Full_Frame" .
 
 
@@ -275,11 +290,6 @@
                                 :Photography_Type .
 
 
-###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Macro_photography
-:Macro_photography rdf:type owl:NamedIndividual ,
-                            :Photography_Type .
-
-
 ###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Night_photography
 :Night_photography rdf:type owl:NamedIndividual ,
                             :Photography_Type .
@@ -288,8 +298,10 @@
 ###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Nikkor_AF_S_50mm_f1.8G
 :Nikkor_AF_S_50mm_f1.8G rdf:type owl:NamedIndividual ;
                         :hasBrand :Nikon ;
-                        :isCompatibleWith :D850 ;
-                        :usedFor :Night_photography ,
+                        :isCompatibleWith :D5600 ,
+                                          :D850 ;
+                        :usedFor :Event_photography ,
+                                 :Night_photography ,
                                  :Portrait_photography ,
                                  :Street_photography ;
                         :Aperture "1.8" ;
@@ -322,7 +334,8 @@
 :Nikkor_Z_24_70mm_f2.8_S rdf:type owl:NamedIndividual ,
                                   :Lens ;
                          :hasBrand :Nikon ;
-                         :isCompatibleWith :Z8 ;
+                         :isCompatibleWith :Z50II ,
+                                           :Z8 ;
                          :usedFor :Night_photography ,
                                   :Portrait_photography ,
                                   :Street_photography ;
@@ -353,10 +366,9 @@
 
 ###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Nikkor_Z_70_200mm_f2.8_VR_S
 :Nikkor_Z_70_200mm_f2.8_VR_S rdf:type owl:NamedIndividual ,
-                                      :Lens ;
+                                      :Lens_For_Mirrorless ;
                              :hasBrand :Nikon ;
-                             :isCompatibleWith :Z50II ,
-                                               :Z8 ;
+                             :isCompatibleWith :Z50II ;
                              :usedFor :Event_photography ,
                                       :Night_photography ,
                                       :Sport_photography ,
@@ -395,14 +407,13 @@
 
 ###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Z8
 :Z8 rdf:type owl:NamedIndividual ,
-             :Mirrorless_Camera ;
+             :Camera ;
     :hasBrand :Nikon ;
     :Captor "Full_Frame" .
 
 
 ###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Z9
-:Z9 rdf:type owl:NamedIndividual ,
-             :Mirrorless_Camera ;
+:Z9 rdf:type owl:NamedIndividual ;
     :hasBrand :Nikon ;
     :hasMount :Z_mount ;
     :Captor "Full_Frame" .
@@ -411,5 +422,321 @@
 ###  http://www.semanticweb.org/gb232322/ontologies/2024/projet-ias/Z_mount
 :Z_mount rdf:type owl:NamedIndividual .
 
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Brand
+                :Camera
+                :Lens
+                :Mount
+                :Photography_Type
+              )
+] .
+
+
+[ rdf:type owl:AllDifferent ;
+  owl:distinctMembers ( :Event_photography
+                        :Landscape_photography
+                        :Night_photography
+                        :Portrait_photography
+                        :Sport_photography
+                        :Street_photography
+                        :Wildlife_photography
+                      )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+:cam rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:lens1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:lens2 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:lens rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:cam1 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:mnt rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:cam2 rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Define the mount of a camera by having a lens is compatible to an another camera" ;
+   rdfs:label "r_mount_by_lens_compability" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasMount ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :cam1 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :mnt
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :isCompatibleWith ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :lens ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :cam1
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :isCompatibleWith ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :lens ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :cam2
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasMount ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :cam2 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :mnt
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Define if a Lens is for DSLR_Camera by checking others Lens that are compatible with the camera are for DSLR" ;
+   rdfs:label "r_lens_for_dslr_by_similarity" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :DSLR_Camera ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :cam
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :isCompatibleWith ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :cam ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :lens1
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :isCompatibleWith ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :cam ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :lens2
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :lens1 ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :lens2
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> :Lens_For_DSLR ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :lens1
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Lens_For_DSLR ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :lens2
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Define if a Lens is for DSLR_Camera" ;
+   rdfs:label "r_lens_for_dslr" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :isCompatibleWith ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :lens ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :cam
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :DSLR_Camera ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :cam
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Lens_For_DSLR ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :lens
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Define if a Camera is a DSLR_Camera by finding a Lens_For_DSLR compatible with it" ;
+   rdfs:label "r_dslr_camera" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :isCompatibleWith ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :cam ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :lens
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Lens_For_DSLR ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :lens
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :DSLR_Camera ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :cam
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Define if a Camera is a Mirrorless_Camera by finding a Lens_For_Mirrorless compatible with it" ;
+   rdfs:label "r_mirrorless_camera" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :isCompatibleWith ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :cam ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :lens
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Lens_For_Mirrorless ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :lens
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Mirrorless_Camera ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :cam
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Define if a Lens is for Mirrorless_Camera by checking others Lens that are compatible with the camera are for Mirrorless" ;
+   rdfs:label "r_lens_for_mirrorless_by_similarity" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Mirrorless_Camera ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :cam
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :isCompatibleWith ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :cam ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :lens1
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :isCompatibleWith ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :cam ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :lens2
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> :lens1 ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> :lens2
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#classPredicate> :Lens_For_Mirrorless ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> :lens1
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Lens_For_Mirrorless ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :lens2
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Define if a Lens is for Mirrorless_Camera" ;
+   rdfs:label "r_lens_for_mirrorless" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :isCompatibleWith ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :lens ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :cam
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#classPredicate> :Mirrorless_Camera ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :cam
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Lens_For_Mirrorless ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :lens
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Define that a lens is compatible with camera with the same mount" ;
+   rdfs:label "r_lens_compatibility_by_mount" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasMount ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :cam1 ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :mnt
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasMount ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :cam2 ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :mnt
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :isCompatibleWith ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> :lens ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> :cam1
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :isCompatibleWith ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :lens ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :cam2
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
